@@ -14,9 +14,16 @@ function getRandomHexColor() {
   }
 const onClickStart = () => {
     buttonStart.disabled = true;
-    buttonStop.disabled = false;
+    buttonStop.disabled = false; 
+    buttonStart.style.backgroundColor = 'grey';
+    buttonStart.style.color = 'black'
+    buttonStop.style.backgroundColor = 'blue';
+    buttonStop.style.color = 'yellow'
+    // buttonStart.hidden = true;
+    // buttonStop.hidden = false;
+
+
     intervalId = setInterval(() => {
-        console.log('start')
         body.style.backgroundColor = getRandomHexColor();
       }, 1000);
 
@@ -24,10 +31,14 @@ const onClickStart = () => {
     };
 const onClickStop = () => {
     clearInterval(intervalId);
+// buttonStart.hidden = false;
+// buttonStop.hidden = true;
 buttonStart.disabled = false;
 buttonStop.disabled = true;
-console.log('stop')
-
+buttonStart.style.backgroundColor = 'blue';
+buttonStart.style.color = 'yellow';
+buttonStop.style.backgroundColor = 'grey';
+buttonStop.style.color = 'black'
 }
 
 buttonStart.addEventListener('click' , onClickStart);
