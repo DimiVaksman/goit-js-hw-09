@@ -1,4 +1,13 @@
 
+import anime from 'animejs/lib/anime.es.js';
+
+anime({
+    targets: 'div',
+    translateX: 50,
+    rotateZ: '1turn',
+    duration: 3000,
+  });
+
 const buttonStart = document.querySelector('[data-start]');
 console.log(buttonStart);
 const buttonStop = document.querySelector('[data-stop]');
@@ -15,9 +24,9 @@ function getRandomHexColor() {
 const onClickStart = () => {
     buttonStart.disabled = true;
     buttonStop.disabled = false; 
-    buttonStart.style.backgroundColor = 'grey';
-    buttonStart.style.color = 'black'
-    buttonStop.style.backgroundColor = 'blue';
+
+    buttonStart.style.color = 'grey'
+
     buttonStop.style.color = 'yellow'
     // buttonStart.hidden = true;
     // buttonStop.hidden = false;
@@ -35,10 +44,8 @@ const onClickStop = () => {
 // buttonStop.hidden = true;
 buttonStart.disabled = false;
 buttonStop.disabled = true;
-buttonStart.style.backgroundColor = 'blue';
 buttonStart.style.color = 'yellow';
-buttonStop.style.backgroundColor = 'grey';
-buttonStop.style.color = 'black'
+buttonStop.style.color = 'grey'
 }
 
 buttonStart.addEventListener('click' , onClickStart);

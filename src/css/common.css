@@ -36,7 +36,6 @@ margin-right: 30px;
 .link{
 
   text-decoration: none;
-  color: yellow;
 }
 
 .list__item {
@@ -45,25 +44,70 @@ margin-right: 30px;
 .list__item:not(:last-child){
 margin-right: 20px;
 }
-.text{
-  font-size: 25px;
-  font-weight: 700;
-  color: yellow;
-  background-color: blue;
-  max-width: 110px;
-  border-radius: 20;
-  border-color: transparent;
-  text-align: center;
-  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 
+.btn{
+
+font-family: Roboto Condensed;
+font-weight: 900;
+font-size: 25px;
+color: #fff;
+background: linear-gradient(183deg, #0066CC 24%, #ffff00 100%);
+padding: 13px 30px;
+border: solid #0066cc 0px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+border-radius: 50px;
+transition : 2026ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+display: flex;
+text-align: center;
+justify-content: center;
+}
+
+.btn:hover{
+
+transition : 2026ms;
+padding: 20px 50px;
+transform : translateY(-0px);
+background: linear-gradient(183deg, #0066CC 24%, #ffff00 100%);
+color: #ffff00;
+border: solid 0px #0066cc;
 }
 
 
 
-.text:hover{
-  cursor: pointer;
-  color: blue;
-  background-color: yellow;
-  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+.back-btn{
+
+font-family: Roboto, sans-serif;
+font-weight: 100;
+font-size: 14px;
+color: #fff;
+background-color: #0066CC;
+padding: 5px 15px;
+border: none;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 50px 0px 50px 1px;
+transition : 3000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+max-width: 120px;
+display: flex;
+text-align: center;
+justify-content: center;
 }
 
+.back-btn:hover{
+
+transition : 3000ms;
+padding: 10px 20px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #264653;
+border: solid 2px #0066cc;
+}
