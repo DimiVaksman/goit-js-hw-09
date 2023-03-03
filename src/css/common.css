@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
   box-sizing: border-box;
 }
@@ -65,6 +66,7 @@ cursor: pointer;
 display: flex;
 text-align: center;
 justify-content: center;
+
 }
 
 .btn:hover{
@@ -111,3 +113,61 @@ background-color: #fff;
 color: #264653;
 border: solid 2px #0066cc;
 }
+
+
+
+.timer{
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+
+.field:not(:last-child){
+margin-right: 30px;
+}
+
+.btn-start{
+  margin-left: 30px;
+}
+
+.calendar{
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.start-button{
+  background: linear-gradient(to right,#bfccdb ,#d1c3f3);
+  background-color: #06c;
+  color: #5e5adb;
+  font-family: Brush Script MT;
+  font-size: 19px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 1px 10px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0px 5px 15px -1px rgba(0,31.439208984375,255,0.5);
+  text-shadow: 6px 1px 8px #ffffff;
+ }
+ .start-button:hover{
+  background: linear-gradient(to right,#c6d2df ,#d6caf4);
+  background-color: #c6d2df;
+cursor: pointer;
+ }
+ .start-button:active{
+  transform: scale(0.95);
+ }
+
+.value{
+font-size: 72px;
+color: #2630de;
+
+
+}
+
+ .label{
+  color: #510bf4;
+ }

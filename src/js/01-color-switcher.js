@@ -25,9 +25,8 @@ const onClickStart = () => {
     buttonStart.disabled = true;
     buttonStop.disabled = false; 
 
-    buttonStart.style.color = 'grey'
-
-    buttonStop.style.color = 'yellow'
+    buttonStart.style.color = 'grey';
+    buttonStop.style.color = 'yellow';
     // buttonStart.hidden = true;
     // buttonStop.hidden = false;
 
@@ -50,5 +49,4 @@ buttonStop.style.color = 'grey'
 
 buttonStart.addEventListener('click' , onClickStart);
 buttonStop.addEventListener('click' , onClickStop);
-
 
