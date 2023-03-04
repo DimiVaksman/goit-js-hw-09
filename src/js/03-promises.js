@@ -1,83 +1,26 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-
-
-
-
-
-// const makeOrder = dish => {
-//   const DELAY = 1000;
-
-
-
-// return new Promise((resolve,reject) => {
-//     const passed = Math.random() > 0.5;
-//     setTimeout(() => {
-// if(passed){
-//   resolve('hier euere Gericht')
-// } else{
-//   reject('gibts keine Tomaten')
-// }
-//     }, DELAY)
-//   })
-
-// }
-
-// makeOrder('Brot').then(onMakeOrderSucces).catch(onMakeOrderError);
-
-// function onMakeOrderSucces(result)  {
-//   console.log('onMakeOrderSucces')
-//   console.log(result)
-// }
-
-// function onMakeOrderError(error)  {
-//   console.log('onMakeOrderError')
-//   console.log(error)
-// }
-
-
-// const makeOrder = dish => {
-// return Promise.resolve('hier euere Gericht')
-
-// }
-
-// makeOrder('Brot').then(onMakeOrderSucces);
-
-// function onMakeOrderSucces(result)  {
-//   console.log('onMakeOrderSucces')
-//   console.log(result)
-// }
-
-// function onMakeOrderError(error)  {
-//   console.log('onMakeOrderError')
-//   console.log(error)
-// }
-
-
-  // fetch('https://pokeapi.co/api/v2/pokemon/1')
-  // .then(r => r.json())
-  // .then(pokemon => {
-  //   console.log(pokemon)
-  // })
-  // .catch( error => {
-  //   console.log('das ist fehler')
-  //   console.log(error)
-  // })
+const alertStyle = {
+  position: 'center-center',
+  distance: '30px',
+  borderRadius: '30px',
+  timeout: 7000,
+  clickToClose: true,
+  cssAnimationStyle: 'from-left',
+}
 
 const create = document.querySelector('button')
 console.log(create)
-
 const form = document.querySelector('.form.form')
 console.log(form)
-
 const delay = document.querySelector('[name="delay"]')
 console.log(delay)
-
 const step = document.querySelector('[name="step"]')
 console.log(step);
-
 const amount = document.querySelector('[name="amount"]')
 console.log(amount);
+const body = document.querySelector('body')
+body.style.backgroundColor = '#0af7ff'
 
 
 
@@ -105,22 +48,22 @@ let inputDelay = Number(delay.value);
 let inputStep = Number(step.value);
 let inputAmount = Number(amount.value);
 
-for (let i = 1; i <= inputAmount; i += 1) {
-  inputDelay += inputStep;
+for (let i = 0; i < inputAmount; i += 1) {
+  inputDelay += inputStep * i;
 
 
   
 createPromise(i, inputDelay).then(({position, delay}) =>  {
   Notify.success(
-    `✅ Fulfilled promise ${position} in ${delay}ms`
+    `✅ Fulfilled promise ${position} in ${delay}ms`, alertStyle
   )
 })
 .catch(({position, delay})=>{
   Notify.failure(
-    `❌ Rejected promise ${position} in ${delay}ms`
+    `❌ Rejected promise ${position} in ${delay}ms`, alertStyle
   )
 })
-e.currentTarget.reset()
+
 }
 }
 

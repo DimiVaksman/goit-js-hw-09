@@ -8,6 +8,8 @@ anime({
     duration: 3000,
   });
 
+
+
 const buttonStart = document.querySelector('[data-start]');
 console.log(buttonStart);
 const buttonStop = document.querySelector('[data-stop]');
@@ -15,6 +17,9 @@ console.log(buttonStop)
 const body = document.querySelector('body');
 console.log(body)
 
+
+
+body.style.backgroundColor = '#ccff00'
 intervalId = null;
 
 

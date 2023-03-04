@@ -170,4 +170,20 @@ color: #2630de;
 
  .label{
   color: #510bf4;
+  font-size: 24px;
+  margin-right: 10px;
+  font-weight: 700;
+ }
+
+
+ .form{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+ }
+
+ label{
+  margin-right: 40px;
  }
