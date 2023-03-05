@@ -18,10 +18,11 @@ const refs = {
   delay: document.querySelector('[name="delay"]'),
   step: document.querySelector('[name="step"]'),
   amount: document.querySelector('[name="amount"]'),
+  button: document.querySelector('.start-button')
 }
 
 
-refs.form.addEventListener('click' , startPromise );
+refs.button.addEventListener('click' , startPromise );
 
 function createPromise(position, delay) {
   return new Promise ((resolve, reject) => {
