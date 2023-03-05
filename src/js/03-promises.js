@@ -53,7 +53,7 @@ let amount = Number(refs.amount.value);
 
 
   
-createPromise(i, inputProm)
+createPromise(i+1, inputProm)
 .then(({position, delay}) =>  {
   Notify.success(
     `✅ Fulfilled promise ${position} in ${delay}ms`, alertStyle
