@@ -20,7 +20,7 @@ console.log(body)
 
 
 body.style.backgroundColor = '#ccff00'
-intervalId = null;
+let intervalId = null;
 
 
 function getRandomHexColor() {
