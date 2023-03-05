@@ -11,7 +11,7 @@ startBtn.disabled = true;
 
 const calnderItem = document.querySelector('#datetime-picker')
 console.log(calnderItem)
-refs = {
+const refs = {
     days : document.querySelector('[data-days]'),
     hours : document.querySelector('[data-hours]'),
     minutes : document.querySelector('[data-minutes]'),
