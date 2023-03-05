@@ -3,7 +3,8 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 
-
+let selectedDate = null;
+let intervalId = null;
 
 const startBtn = document.querySelector('[data-start]');
 console.log(startBtn) ;
@@ -33,7 +34,7 @@ const options = {
            Report.warning('Error', 'Please choose a date in the future', 'Yes, sir!');
         }
         else{
-            selectedDate = selectedDates[0].getTime();
+           selectedDate = selectedDates[0].getTime();
             startBtn.disabled = false;
         }
     },
@@ -70,6 +71,7 @@ function pad (value) {
     }
 
   }
+  
 function stop() {
 clearInterval(intervalId);
 calnderItem.disabled = false;
